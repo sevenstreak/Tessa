@@ -1,0 +1,16 @@
+import requests
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+url = "https://api.rawg.io/api/games//movies/?key=" + key1 
+
+headers = {
+	
+	"X-RapidAPI-Host": "rawg-video-games-database.p.rapidapi.com"
+}
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
