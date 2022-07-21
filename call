@@ -1,12 +1,14 @@
 import requests
 from dotenv import load_dotenv
-import os
+import os	
+import json
+
 
 load_dotenv()
 
 key = "?key=" + os.getenv('RAWG_KEY')
 
-url = "https://api.rawg.io/api/games/" + "halo-infinite" + key                 
+url = "https://api.rawg.io/api/games/" + "dishonored" + key                 
 # "?key=" + os.getenv('RAWG_KEY') 
 
 """ headers = {
@@ -15,5 +17,8 @@ url = "https://api.rawg.io/api/games/" + "halo-infinite" + key
 }
  """
 response = requests.request("GET", url)
+decoded = response.json()
+#json = json.load(response).read()
 
-print(response.text)
+
+print(decoded['metacritic'])
