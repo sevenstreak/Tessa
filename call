@@ -4,7 +4,10 @@ import os
 
 load_dotenv()
 
-url = "https://api.rawg.io/api/games//movies/?key=" + os.getenv('RAWG_KEY') 
+key = "?key=" + os.getenv('RAWG_KEY')
+
+url = "https://api.rawg.io/api/games/" + "halo-infinite" + key                 
+# "?key=" + os.getenv('RAWG_KEY') 
 
 """ headers = {
 	
