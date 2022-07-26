@@ -12,7 +12,7 @@ async def desc(game:str):
 	url = api + game + key                 
 	response = requests.request("GET", url)
 	decoded = response.json()
-	#print(decoded)
+	print(decoded)
 	return decoded['description_raw']
 
 
@@ -20,7 +20,7 @@ async def metacritic(game:str):
 	url = api + game + key                 
 	response = requests.request("GET", url)
 	decoded = response.json()
-	#print(decoded)
+	print(decoded)
 	return decoded['metacritic']
 
 
@@ -28,7 +28,7 @@ async def g(game:str):
 	url = api + game + key                 
 	response = requests.request("GET", url)
 	decoded = response.json()
-	#print(decoded)
+	print(decoded)
 	return decoded
 
 

@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from discord.ext import commands
-from call import * 
+from call import *
 
 load_dotenv()
 
@@ -27,5 +27,5 @@ async def review(ctx, args):
 async def image(ctx, args):
     await ctx.send(await bg(args))
 
-
+#TOKEN
 bot.run(os.getenv('TOKEN'))
