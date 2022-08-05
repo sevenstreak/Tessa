@@ -1,11 +1,12 @@
 import requests
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import os	
 
+#load_dotenv()
 
-load_dotenv()
+RAWG_KEY = os.environ['RAWG_KEY']
 
-key = "?key=" + os.getenv('RAWG_KEY')
+key = "?key=" + RAWG_KEY
 api = "https://api.rawg.io/api/games/"
 
 async def desc(game:str):

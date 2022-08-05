@@ -1,9 +1,11 @@
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from discord.ext import commands
 from call import * 
 
-load_dotenv()
+#load_dotenv()
+
+TOKEN = os.environ['TOKEN']
 
 bot = commands.Bot(command_prefix="!")
 
@@ -28,4 +30,4 @@ async def image(ctx, args):
     await ctx.send(await bg(args))
 
 
-bot.run(os.getenv('TOKEN'))
+bot.run(TOKEN)
