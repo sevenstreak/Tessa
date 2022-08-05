@@ -5,7 +5,7 @@ from call import *
 
 #load_dotenv()
 
-TOKEN = os.environ['TOKEN']
+token = os.environ['TOKEN']
 
 bot = commands.Bot(command_prefix="!")
 
@@ -30,4 +30,4 @@ async def image(ctx, args):
     await ctx.send(await bg(args))
 
 
-bot.run(TOKEN)
+bot.run(token)
